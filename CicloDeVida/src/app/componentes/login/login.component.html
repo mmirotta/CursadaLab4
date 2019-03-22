@@ -1,9 +1,15 @@
-<h1>Componente Login</h1>
+<div class="login">
+<h1>LOGIN</h1>
 <span>Email</span>
 <input type="text" [(ngModel)]="usuario.email">
 <span>Contraseña</span>
 <input type="text" [(ngModel)]="usuario.password">
+<button (click)="guardar()" >Login</button>
+</div>
+<span>email: {{usuario.email}}</span>
+<div *ngIf="guardado" class="resultados">
+<h1>Resultados</h1>
+<span>email: {{usuario.email}}</span>
+<span>contraseña: {{usuario.password}}</span>
+</div>
 
-
-<span>{{usuario.email}}</span>
-<span>{{usuario.password}}</span>
