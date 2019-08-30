@@ -10,12 +10,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './componentes/error/error.component';
 import { ListadoDeUsuariosComponent } from './componentes/listado-de-usuarios/listado-de-usuarios.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
+import { GrillaUsuariosComponent } from './componentes/grilla-usuarios/grilla-usuarios.component';
 
 
 const miRuteo = [
   { path: 'bienvenida', component: BienvenidaComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'listado', component: ListadoDeUsuariosComponent },
   { path: 'usuario', component: UsuarioComponent },
   { path: '', component: LoginComponent },
   { path: '**', component: ErrorComponent } //Error
@@ -28,7 +28,8 @@ const miRuteo = [
     LoginComponent,
     ErrorComponent,
     ListadoDeUsuariosComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    GrillaUsuariosComponent
   ],
   imports: [
     BrowserModule,
