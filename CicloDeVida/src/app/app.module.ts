@@ -7,13 +7,18 @@ import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.compone
 import { LoginComponent } from './componentes/login/login.component';
 
 import { Routes, RouterModule } from '@angular/router';
-import { ErrorComponent } from './componentes/error/error.component'
+import { ErrorComponent } from './componentes/error/error.component';
+import { ListadoDeUsuariosComponent } from './componentes/listado-de-usuarios/listado-de-usuarios.component';
+import { UsuarioComponent } from './componentes/usuario/usuario.component';
+
 
 const miRuteo = [
-  { path:'bienvenida', component: BienvenidaComponent },
-  { path:'login', component: LoginComponent },
-  { path:'', component: LoginComponent },
-  { path:'**', component: ErrorComponent } //Error
+  { path: 'bienvenida', component: BienvenidaComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'listado', component: ListadoDeUsuariosComponent },
+  { path: 'usuario', component: UsuarioComponent },
+  { path: '', component: LoginComponent },
+  { path: '**', component: ErrorComponent } //Error
 ];
 
 @NgModule({
@@ -21,7 +26,9 @@ const miRuteo = [
     AppComponent,
     BienvenidaComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListadoDeUsuariosComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

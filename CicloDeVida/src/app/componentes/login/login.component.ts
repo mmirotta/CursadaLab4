@@ -9,18 +9,18 @@ import { Usuario } from 'src/app/clases/usuario';
 export class LoginComponent implements OnInit {
 
   public usuario: Usuario;
-  public guardado: boolean;
+  public logueado: boolean;
 
   constructor() {
     this.usuario = new Usuario();
-    this.guardado = false;
+    this.logueado = false;
   }
 
   ngOnInit() {
   }
 
-  guardar() {
-    this.guardado = true;
+  Loguear() {
+    this.logueado = true;
     console.info("el objeto",this.usuario)
   }
 

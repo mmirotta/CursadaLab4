@@ -1,15 +1,15 @@
 <div class="login">
-<h1>LOGIN</h1>
-<span>Email</span>
-<input type="text" [(ngModel)]="usuario.email">
-<span>Contraseña</span>
-<input type="text" [(ngModel)]="usuario.password">
-<button (click)="guardar()" >Login</button>
+  <div>
+    <h1>LOGIN</h1>
+    <span>Email</span>
+    <input type="text" [(ngModel)]="usuario.email" />
+    <span>Contraseña</span>
+    <input type="text" [(ngModel)]="usuario.password" />
+    <button (click)="Loguear()">Login</button>
+  </div>
 </div>
-<span>email: {{usuario.email}}</span>
-<div *ngIf="guardado" class="resultados">
-<h1>Resultados</h1>
-<span>email: {{usuario.email}}</span>
-<span>contraseña: {{usuario.password}}</span>
+<div *ngIf="logueado" class="resultados">
+  <h1>Usuario Logueado</h1>
+  <span>email: {{ usuario.email }}</span>
+  <span>contraseña: {{ usuario.password }}</span>
 </div>
-
