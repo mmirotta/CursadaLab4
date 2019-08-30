@@ -11,6 +11,8 @@ export class UsuarioComponent implements OnInit {
   public usuario: Usuario = new Usuario();
   public listadoUsuarios: Array<Usuario> = Array<Usuario>();
 
+  public vista: string = 'grilla';
+
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +23,10 @@ export class UsuarioComponent implements OnInit {
     usuario.email = this.usuario.email;
     usuario.password = this.usuario.password;
     this.listadoUsuarios.push(usuario);
+  }
+
+  CambiarVista(valor) {
+    this.vista = valor;
   }
 
 }
