@@ -17,7 +17,9 @@ export class UsuarioComponent implements OnInit {
   }
 
   AgregarUsuario() {
-    let usuario = this.usuario;
+    const usuario = new Usuario();
+    usuario.email = this.usuario.email;
+    usuario.password = this.usuario.password;
     this.listadoUsuarios.push(usuario);
   }
 
