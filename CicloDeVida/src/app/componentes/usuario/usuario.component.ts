@@ -29,4 +29,8 @@ export class UsuarioComponent implements OnInit {
     this.vista = valor;
   }
 
+  UsuarioSeleccionado(usuario) {
+    this.usuario = usuario;
+  }
+
 }

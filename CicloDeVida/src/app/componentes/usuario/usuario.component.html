@@ -14,4 +14,4 @@
 <h1 *ngIf="vista == 'lista'">Listado Usuarios</h1>
 <app-listado-de-usuarios [listadoUsuarios]="listadoUsuarios" *ngIf="vista == 'lista'"></app-listado-de-usuarios>
 <h1 *ngIf="vista == 'grilla'">Grilla Usuarios</h1>
-<app-grilla-usuarios [listadoUsuarios]="listadoUsuarios" *ngIf="vista == 'grilla'"></app-grilla-usuarios>
+<app-grilla-usuarios [listadoUsuarios]="listadoUsuarios" *ngIf="vista == 'grilla'" (usuarioSeleccionado)="UsuarioSeleccionado($event)"></app-grilla-usuarios>
