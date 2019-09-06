@@ -8,7 +8,8 @@ import { Usuario } from 'src/app/clases/usuario';
 })
 export class GrillaUsuariosComponent implements OnInit {
   @Input() listadoUsuarios: Array<Usuario> = Array<Usuario>();
-  @Output() usuarioSeleccionado: EventEmitter<any> = new EventEmitter<any>();
+  @Output() editarUsuario: EventEmitter<any> = new EventEmitter<any>();
+  @Output() borrarUsuario: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
@@ -16,7 +17,11 @@ export class GrillaUsuariosComponent implements OnInit {
   }
 
   Editar(usuario: Usuario) {
-    this.usuarioSeleccionado.emit(usuario);
+    this.editarUsuario.emit(usuario);
+  }
+
+  Borrar(usuario: Usuario) {
+    this.borrarUsuario.emit(usuario);
   }
 
 }
